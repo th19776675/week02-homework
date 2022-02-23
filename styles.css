@@ -1,5 +1,5 @@
 body {
-    font-family: monospace;
+    font-family: sans-serif;
 }
 
 header {
@@ -18,18 +18,21 @@ header {
 }
 
 h1 {
-    font-size: 150%;
-    transform: scaleY(0.75);
-    color: grey
+    font-size: 400%;
+    color: grey;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+nav {
+    color: grey;
 }
 
 a {
-    display : inline;
-    transform: scaleY(0.75);
     color: rgb(85, 85, 85);
     text-decoration: none;
     /* font-size: 150%; */
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 a:hover {
@@ -50,15 +53,12 @@ a:hover {
     display: inline-block;
 }
 
-.line {
-    
-}
 
 .hero-sphere {
 	display: block;
 	width: 150px;
 	height: 150px;
-	margin: 100px auto 0;
+	margin: 50px auto 0;
 	border-radius: 50%;
 	box-shadow: inset -25px -15px 40px rgba(0,0,0,.3);
 	background-image: radial-gradient(circle at 65% 15%, #ffffff 1px, rgb(0, 255, 255) 3%, rgba(0, 0, 139, 0) 60%, rgb(236, 219, 219) 100%);
