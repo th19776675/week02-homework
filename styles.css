@@ -1,6 +1,11 @@
 body {
     font-family: sans-serif;
+    color: grey;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 header {
     display: flex;
@@ -93,6 +98,43 @@ svg {
 .project {
     transform: rotate(120deg);
 }
+
+footer {
+    position: fixed;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.scroll-box {
+    width: 250px;
+    height: 25px;
+    background-color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    position:relative;
+    overflow: hidden;
+}
+
+.scroll {
+    top: 10px;
+    left: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%
+    }
+  }
 
 @keyframes color-shift {
     0%   {background-color:red;}
