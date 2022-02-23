@@ -23,6 +23,19 @@ h1 {
     color: grey
 }
 
+a {
+    display : inline;
+    transform: scaleY(0.75);
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    /* font-size: 150%; */
+    transition: all 1s;
+}
+
+a:hover {
+    text-shadow:0 0 1px blue;
+}
+
 .sq-container {
     display: flex;
     justify-content: center;
@@ -37,18 +50,22 @@ h1 {
     display: inline-block;
 }
 
+.line {
+    
+}
+
 .hero-sphere {
 	display: block;
 	width: 150px;
 	height: 150px;
-	margin: 50px auto 0;
+	margin: 100px auto 0;
 	border-radius: 50%;
 	box-shadow: inset -25px -15px 40px rgba(0,0,0,.3);
 	background-image: radial-gradient(circle at 65% 15%, #ffffff 1px, rgb(0, 255, 255) 3%, rgba(0, 0, 139, 0) 60%, rgb(236, 219, 219) 100%);
     animation-name: color-shift;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-    transform: scale(1.5);
+    transform: scale(1.5);  
 }
 
 .balance {
