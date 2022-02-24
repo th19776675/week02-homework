@@ -133,6 +133,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
+    z-index: 6;
 }
 
 .scroll-box{
@@ -168,6 +169,19 @@ footer {
     padding: 5px;
     width:190px;
     margin: 5px;
+    position: relative;
+}
+
+.project-card:hover::after{
+    content: attr(title);
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: 10px;
+    text-shadow:0 0 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 0 5px;
 }
 
 h3{ 
@@ -190,6 +204,11 @@ h3{
 .project-card img {
     width: 100%;
     filter: grayscale(100%);
+    transition: all 0.5s;
+}
+
+.project-card:hover img {
+    filter: grayscale(50%) contrast(50%)
 }
 
 .contact-links {
@@ -218,3 +237,30 @@ h3{
     75%  {background-color:rgb(15, 128, 0); left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
   }
+
+@media screen and (max-width: 500px) {
+    .display {
+        width: 100%;
+    }
+    .caption {
+        width: 100%;
+    }
+    .project-wrapper{
+        width: 100%;
+    }
+    .big{
+        width: 190px;
+    }
+    .project-card::after{
+        content: attr(title);
+        position: absolute;
+        z-index: 5;
+        bottom: 10px;
+        left: 10px;
+        text-shadow:0 0 0;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.205);
+        padding: 0 5px;
+    }
+  }
+  
