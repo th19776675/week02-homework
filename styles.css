@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     color: grey;
+    padding-bottom: 25px;
 }
 
 html {
@@ -99,17 +100,44 @@ svg {
     transform: rotate(120deg);
 }
 
+#about {
+    padding: 25px;
+}
+
+.profile {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    /* background: green; */
+}
+
+.display {
+    width: 400px;
+}
+
+.caption {
+
+    width: 400px;
+    margin-top: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+    height: 150px;
+    overflow-y: scroll;
+    border: solid grey 1px;
+    padding: 5px;
+}
+
 footer {
     position: fixed;
     bottom:0;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
-.scroll-box {
-    width: 250px;
-    height: 25px;
+.scroll-box{
+    width: 400px;
+    height: 10px;
     background-color: #ffffff;
     font-weight: bold;
     padding: 10px;
@@ -124,8 +152,55 @@ footer {
     /* overflow: hidden; */
     position: absolute;
     white-space: nowrap;
-    animation: marquee 10s linear infinite;
+    animation: marquee 7s linear infinite;
 }
+
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.project-card {
+    border: solid grey 1px;
+    padding: 5px;
+    width:190px;
+    margin: 5px;
+}
+
+h3{ 
+    display: inline;
+    /* border: grey solid 1px;
+    border-radius: 50px; */
+    padding: 0 5px;
+
+}
+
+.card-caption {
+    margin: 10px;
+    text-align: center;
+}
+
+.big {
+    width: 400px;
+}
+
+.project-card img {
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+}
+
+#contact a {
+    padding: 10px 10px;
+}
+
 
 @keyframes marquee {
     0% {
