@@ -1,12 +1,24 @@
+/* Declared Variables */
+:root {
+    --main: grey;
+  }
+
+/* General Element Selectors */
+
 body {
     font-family: sans-serif;
-    color: grey;
+    color: var(--main);
     padding-bottom: 25px;
 }
 
 html {
     scroll-behavior: smooth;
   }
+
+
+/* Header Styling */
+
+/* Element Selectors */
 
 header {
     display: flex;
@@ -16,22 +28,15 @@ header {
     padding-top: 10px;
 }
 
-.nametag{
-    padding: 5px;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-}
-
 h1 {
     font-size: 400%;
-    color: grey;
+    color: var(--main);
     font-weight: bold;
     margin-top: 50px;
 }
 
 nav {
-    color: grey;
+    color: var(--main);
 }
 
 a {
@@ -45,20 +50,7 @@ a:hover {
     text-shadow:0 0 1px blue;
 }
 
-.sq-container {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-}
-
-.black-sq {
-    width: 10px;
-    height: 10px;
-    background: grey;
-    margin: 0 2px;
-    display: inline-block;
-}
-
+/* Class Selectors */
 
 .hero-sphere {
 	display: block;
@@ -74,41 +66,20 @@ a:hover {
     transform: scale(1.5);  
 }
 
-.balance {
-    margin-left: 9px;
-}
+/* About Section Styling */
 
-.circle-container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle-text {
-    font-size: 200%;
-    fill: grey;
-}
-
-svg {
-    height: 350px;
-    width: 350px;
-    fill:white;
-    transform: scale(0.75);
-}
-
-.project {
-    transform: rotate(120deg);
-}
+/* Id Selectors */
 
 #about {
     padding: 25px;
 }
 
+/* Class Selectors */
+
 .profile {
     display:flex;
     align-items: center;
     flex-direction: column;
-    /* background: green; */
 }
 
 .display {
@@ -116,45 +87,19 @@ svg {
 }
 
 .caption {
-
     width: 400px;
     margin-top: 25px;
     text-align: justify;
     text-justify: inter-word;
     height: 150px;
     overflow-y: scroll;
-    border: solid grey 1px;
+    border: solid var(--main) 1px;
     padding: 5px;
 }
 
-footer {
-    position: fixed;
-    bottom:0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 6;
-}
+/* Projects Section Styling */
 
-.scroll-box{
-    width: 400px;
-    height: 10px;
-    background-color: #ffffff;
-    font-weight: bold;
-    padding: 10px;
-    position:relative;
-    overflow: hidden;
-}
-
-.scroll {
-    top: 10px;
-    left: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-    position: absolute;
-    white-space: nowrap;
-    animation: marquee 7s linear infinite;
-}
+/* Class Selectors */
 
 .project-wrapper {
     display: flex;
@@ -165,7 +110,7 @@ footer {
 }
 
 .project-card {
-    border: solid grey 1px;
+    border: solid var(--main) 1px;
     padding: 5px;
     width:190px;
     margin: 5px;
@@ -182,14 +127,6 @@ footer {
     color: white;
     background-color: rgba(0, 0, 0, 0.205);
     padding: 0 5px;
-}
-
-h3{ 
-    display: inline;
-    /* border: grey solid 1px;
-    border-radius: 50px; */
-    padding: 0 5px;
-
 }
 
 .card-caption {
@@ -211,6 +148,10 @@ h3{
     filter: grayscale(50%) contrast(50%)
 }
 
+/* Contact Section Styling */
+
+/* Class Selectors */
+
 .contact-links {
     display: flex;
     justify-content: center;
@@ -220,6 +161,43 @@ h3{
     padding: 10px 10px;
 }
 
+/* Footer Styling */
+
+/* Element Selectors */
+
+footer {
+    position: fixed;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* Class Selectors */
+
+.scroll-box{
+    width: 400px;
+    height: 10px;
+    background-color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    position:relative;
+    overflow: hidden;
+}
+
+.scroll {
+    top: 10px;
+    left: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 7s linear infinite;
+}
+
+/* Ticker Animation */
 
 @keyframes marquee {
     0% {
@@ -230,6 +208,8 @@ h3{
     }
   }
 
+/* Color Sphere Animation */
+
 @keyframes color-shift {
     0%   {background-color:red;}
     25%  {background-color:yellow;}
@@ -237,6 +217,8 @@ h3{
     75%  {background-color:rgb(15, 128, 0); left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
   }
+
+/* Responsiveness */  
 
 @media screen and (max-width: 500px) {
     .display {
